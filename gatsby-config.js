@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Jelena Viskovic`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -21,6 +21,15 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `xc5ga9oc67o2`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: 'm9dpOPJ5Y8HTfdrLnx6Qa8rqu4MEjXxzE_Pk0qpdhRI',
       },
     },
     `gatsby-transformer-sharp`,
