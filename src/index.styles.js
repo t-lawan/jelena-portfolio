@@ -54,13 +54,7 @@ const styles = css`
     /* font-family: "Exo", sans-serif;
     font-style: normal; */
     text-transform: lowercase;
-
-  }
-  body {
-    background: "white";
-    /* background: radial-gradient(red, blue);
-    background-size: 200% 200%; 
-    animation: moveBackground 2s infinite alternate; */
+    background: white;
   }
   h1,
   h2,
