@@ -8,6 +8,7 @@
     "@contentful/rich-text-react-renderer": "^15.22.11",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+    "dotenv": "^16.4.5",
     "gatsby": "^5.13.5",
     "gatsby-plugin-emotion": "^8.13.1",
     "gatsby-plugin-image": "^3.13.1",

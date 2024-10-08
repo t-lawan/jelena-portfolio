@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -28,8 +32,7 @@ module.exports = {
       options: {
         spaceId: `xc5ga9oc67o2`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        accessToken: 'm9dpOPJ5Y8HTfdrLnx6Qa8rqu4MEjXxzE_Pk0qpdhRI',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,
