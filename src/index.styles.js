@@ -141,6 +141,7 @@ const styles = css`
     text-decoration: underline;
     color: purple !important;
     animation: rainbow 2s linear infinite alternate;
+    font-style: italic;
   }
 
   @keyframes rainbow {
