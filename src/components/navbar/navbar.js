@@ -44,6 +44,7 @@ const MobileNavbarWrapper = styled.div`
 const HamburgerWrapper = styled.div`
   display: none;
   @media only screen and (max-width: ${size.tablet}) {
+    transform: skewY(-5deg);
     display: flex;
     flex-direction: row;
     justify-content: end;
