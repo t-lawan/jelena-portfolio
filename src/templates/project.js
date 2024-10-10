@@ -19,11 +19,11 @@ const ContentWrapper = styled.div`
 `
 
 const Title = styled.p`
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-style: italic;
 `
 
 const ProjectPage = context => {
-  // console.log("context", context)
 
   let page = context.pageContext.page
   return (

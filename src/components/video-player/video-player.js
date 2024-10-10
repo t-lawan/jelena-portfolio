@@ -9,7 +9,7 @@ const VideoPlayerWrapper = styled.div`
 export const  VideoPlayer = ({url}) => {
     return (
         <VideoPlayerWrapper>
-        <ReactPlayer width={'100%'} url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+        <ReactPlayer width={'100%'} url={url} />
 
         </VideoPlayerWrapper>
     );

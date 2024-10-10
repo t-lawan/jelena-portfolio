@@ -3,7 +3,6 @@ import { Project } from "./models/Project"
 
 export class Convert {
   static toProject = contentfulModel => {
-    console.log("contentfulModel", contentfulModel)
     return new Project(
         contentfulModel.contentful_id,
         contentfulModel.title,

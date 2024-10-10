@@ -18,13 +18,14 @@ const TwoColumnWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 5fr;
   height: 100vh;
+
   @media only screen and (max-width: ${size.tablet}) {
     grid-template-columns: 1fr;
+    align-content: baseline;
   }
 `
 
 const Layout = props => {
-  const mainSection = <MainWrapper>{props.children}</MainWrapper>
 
   return (
     <LayoutWrapper>
@@ -32,7 +33,7 @@ const Layout = props => {
 
       <TwoColumnWrapper>
         <Navbar />
-        {mainSection}
+        <MainWrapper>{props.children}</MainWrapper>
       </TwoColumnWrapper>
 
       {/* <Marquee /> */}

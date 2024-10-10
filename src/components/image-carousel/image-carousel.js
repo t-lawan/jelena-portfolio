@@ -33,12 +33,11 @@ export const ImageCarousel = ({ images }) => {
       width={"100%"}
     >
       {images.map((image, index) => {
-        console.log("content", image)
         const img = getImage(image)
         
         return(
         <div key={index}>
-            <GatsbyImage image={img} alt={image.filename} />
+            <GatsbyImage image={img} alt={image.filename ?? ''} />
             {/* <p> {image.description} </p> */}
             <p> {image.filename} </p>
         </div>

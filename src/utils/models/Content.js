@@ -17,13 +17,12 @@ export class Content {
 }
 
 export const renderContent = content => {
-  // console.log("content", content)
 
   if (content.image) {
     const image = getImage(content.image)
     return (
       <>
-        <GatsbyImage width={"100%"} image={image} alt={image.filename} />
+        <GatsbyImage width={"100%"} image={image} alt={image.filename ?? ''} />
         {/* <p> {content.image.description} </p> */}
         <p> {content.image.filename} </p>
       </>
@@ -34,8 +33,8 @@ export const renderContent = content => {
     return <ImageCarousel images={content.imageCarousel} />
   }
 
-  if (content.video) {
-    return <VideoPlayer url={content.video} />
+  if (content.url) {
+    return <VideoPlayer url={content.url} />
   }
 
   if (content.text) {

@@ -45,6 +45,10 @@ exports.createPages = async ({ graphql, actions }) => {
                     raw
                   }
                 }
+                ... on ContentfulVideo {
+                  id
+                  url
+                }
               }
             }
           }
