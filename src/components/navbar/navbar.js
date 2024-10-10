@@ -20,7 +20,7 @@ const NavbarWrapper = styled.nav`
 `
 
 const StyledInternalLink = styled(InternalLink)`
-    font-weight: bold;
+    /* font-weight: bold; */
     font-style: italic;
 `
 
