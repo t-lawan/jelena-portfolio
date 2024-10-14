@@ -26,13 +26,15 @@ const Title = styled.p`
 const ProjectPage = context => {
 
   let page = context.pageContext.page
+
+  console.log(page)
   return (
     <Layout>
       <Seo title={page.title} description={page.description} />
-      <ContentWrapper>
-        <Title>{page.title}</Title>
-        {/* <p> {page.description} </p> */}
-      </ContentWrapper>
+      {/* <ContentWrapper>
+        <Title>{page.title}, 2024</Title>
+        <p> {page.description} </p>
+      </ContentWrapper> */}
 
       {page.content.map((content, index) => (
         <ContentWrapper key={index}>{renderContent(content)}</ContentWrapper>
