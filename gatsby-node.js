@@ -65,7 +65,7 @@ exports.createPages = async ({ graphql, actions }) => {
           id: node.id,
           title: node.title,
           slug: node.slug,
-          description: node.seoDescriptions.seoDescriptions,
+          description: node.seoDescriptions?.seoDescriptions,
           content: node.contentList.map(item => item.content),
         },
       },

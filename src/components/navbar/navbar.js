@@ -10,23 +10,21 @@ const NavbarWrapper = styled.nav`
   height: 100vh;
   padding: 1rem;
 
-
   @media only screen and (max-width: ${size.tablet}) {
     height: fit-content;
     padding: 0.5rem 1rem;
     border-bottom: 1px dotted blue;
-    
   }
 `
 
 const StyledInternalLink = styled(InternalLink)`
-    /* font-weight: bold; */
-    font-style: italic;
+  /* font-weight: bold; */
+  font-style: italic;
 `
 
 const HiddableInternalLink = styled(InternalLink)`
-    @media only screen and (max-width: ${size.tablet}) {
-        display: ${props => (props.isopen ? "none" : "inherit")};
+  @media only screen and (max-width: ${size.tablet}) {
+    display: ${props => (props.isopen ? "none" : "inherit")};
   }
 `
 
@@ -71,17 +69,20 @@ const Navbar = () => {
   const data = useStaticQuery(
     graphql`
       {
-        allContentfulNavbarLink {
-          edges {
-            node {
+        contentfulSite {
+          title
+          homePageText {
+            raw
+          }
+          description
+          navbarLinks {
+            title
+            project {
+              contentful_id
+              slug
               title
-              project {
-                contentful_id
-                slug
-                title
-                seoDescriptions {
-                  seoDescriptions
-                }
+              seoDescriptions {
+                seoDescriptions
               }
             }
           }
@@ -90,17 +91,15 @@ const Navbar = () => {
     `
   )
 
-  const allContentfulNavbarLink = data.allContentfulNavbarLink
-  const navbarLinks = Convert.toModelArray(
-    allContentfulNavbarLink,
-    Convert.toNavbarLink
-  )
+  const navbarLinks = data.contentfulSite.navbarLinks.map(navbarLink => {
+    return Convert.toNavbarLink(navbarLink)
+  });
 
   return (
     <NavbarWrapper>
       <MobileNavbarWrapper>
         <StyledInternalLink activeClassName="underline" to={`/`}>
-          [jelena viskovic]
+          jelena viskovic
         </StyledInternalLink>
         <HamburgerWrapper>
           <Hamburger
@@ -113,8 +112,12 @@ const Navbar = () => {
         </HamburgerWrapper>
       </MobileNavbarWrapper>
       <NavbarLinksWrapper isopen={isOpen}>
-        <HiddableInternalLink isopen={isOpen} activeClassName="underline" to={`/`}>
-          [jelena viskovic]
+        <HiddableInternalLink
+          isopen={isOpen}
+          activeClassName="underline"
+          to={`/`}
+        >
+          jelena viskovic
         </HiddableInternalLink>
         {navbarLinks.map((navbarLink, index) => (
           <InternalLink

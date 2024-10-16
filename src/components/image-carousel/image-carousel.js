@@ -22,7 +22,7 @@ export const ImageCarousel = ({ images }) => {
     <StyledCarousel
       showThumbs={false}
       showArrows={false}
-      showIndicators={false}
+      showIndicators={true}
       showStatus={false}
       centerMode={false}
       swipeable={false}
@@ -37,9 +37,8 @@ export const ImageCarousel = ({ images }) => {
         
         return(
         <div key={index}>
-            <GatsbyImage image={img} alt={image.filename ?? ''} />
-            {/* <p> {image.description} </p> */}
-            <p> {image.filename} </p>
+            <GatsbyImage image={img} alt={image.description ?? ''} />
+            <p> {image.description} </p>
         </div>
       )})}
     </StyledCarousel>

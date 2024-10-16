@@ -7,7 +7,7 @@ export class Convert {
         contentfulModel.contentful_id,
         contentfulModel.title,
         contentfulModel.slug,
-        contentfulModel.seoDescriptions.seoDescriptions,
+        contentfulModel.seoDescriptions?.seoDescriptions,
         contentfulModel.contentList
     )
   }

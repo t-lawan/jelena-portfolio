@@ -51,9 +51,6 @@ const styles = css`
     font-family: "Old Standard TT", serif;
     font-weight: 400;
     font-style: normal;
-    /* font-family: "Exo", sans-serif;
-    font-style: normal; */
-    text-transform: lowercase;
     background: white;
   }
   h1,

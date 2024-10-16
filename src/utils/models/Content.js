@@ -22,9 +22,8 @@ export const renderContent = content => {
     const image = getImage(content.image)
     return (
       <>
-        <GatsbyImage width={"100%"} image={image} alt={image.filename ?? ''} />
-        {/* <p> {content.image.description} </p> */}
-        <p> {content.image.filename} </p>
+        <GatsbyImage width={"100%"} image={image} alt={content.image.description ?? ''} />
+        <p> {content.image.description} </p>
       </>
     )
   }
