@@ -7,7 +7,6 @@ const StyledCarousel = styled(Carousel)`
   background: transparent;
   /* min-height: 20vh; */
   /* width: 80%; */
-  
 
   .carousel .slide {
     background: transparent;
@@ -15,6 +14,21 @@ const StyledCarousel = styled(Carousel)`
     text-align: left;
   }
   margin-bottom: 2rem;
+`
+
+const StyledImage = styled(GatsbyImage)`
+  max-height: 60vh;
+  img {
+    object-fit: contain !important;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+
+const StyledImageWrapper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
 `
 
 export const ImageCarousel = ({ images }) => {
@@ -34,13 +48,14 @@ export const ImageCarousel = ({ images }) => {
     >
       {images.map((image, index) => {
         const img = getImage(image)
-        
-        return(
-        <div key={index}>
-            <GatsbyImage image={img} alt={image.description ?? ''} />
+
+        return (
+          <StyledImageWrapper key={index}>
+            <StyledImage image={img} alt={image.description ?? ""} />
             <p> {image.description} </p>
-        </div>
-      )})}
+          </StyledImageWrapper>
+        )
+      })}
     </StyledCarousel>
   )
 }
