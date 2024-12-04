@@ -26,8 +26,6 @@ const Title = styled.p`
 const ProjectPage = context => {
 
   let page = context.pageContext.page
-
-  console.log(page)
   return (
     <Layout>
       <Seo title={page.title} description={page.description} />
