@@ -7,6 +7,16 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `en` })
+  setHeadComponents([
+    <link
+      rel="preload"
+      href="/fonts/fonts/trade-gothic.otf"
+      as="font"
+      type="font/otf"
+      crossOrigin="anonymous"
+      key="interFont"
+    />,
+  ])
 }

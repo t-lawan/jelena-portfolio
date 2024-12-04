@@ -23,8 +23,10 @@ const StyledInternalLink = styled(InternalLink)`
 `
 
 const HiddableInternalLink = styled(InternalLink)`
+    margin-bottom: 1rem;
   @media only screen and (max-width: ${size.tablet}) {
     display: ${props => (props.isopen ? "none" : "inherit")};
+    margin: 0;
   }
 `
 
@@ -99,7 +101,7 @@ const Navbar = () => {
     <NavbarWrapper>
       <MobileNavbarWrapper>
         <StyledInternalLink activeClassName="underline" to={`/`}>
-          jelena viskovic
+          Jelena Viskovic
         </StyledInternalLink>
         <HamburgerWrapper>
           <Hamburger
@@ -117,7 +119,7 @@ const Navbar = () => {
           activeClassName="underline"
           to={`/`}
         >
-          jelena viskovic
+          Jelena Viskovic
         </HiddableInternalLink>
         {navbarLinks.map((navbarLink, index) => (
           <InternalLink

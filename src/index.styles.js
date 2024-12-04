@@ -3,7 +3,6 @@ import { Global, css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
-
 export const InternalLink = styled(Link)`
   text-decoration: none;
   display: block;
@@ -37,9 +36,17 @@ export const Section = styled.section`
 `
 
 const styles = css`
+  @font-face {
+    font-family: "TradeGothic";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    src: url(/fonts/trade-gothic.otf) format("opentype");
+  }
 
   @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
-  *, body {
+  *,
+  body {
     box-sizing: border-box;
   }
 
@@ -48,7 +55,7 @@ const styles = css`
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    font-family: "Old Standard TT", serif;
+    font-family: "TradeGothic", serif;
     font-weight: 400;
     font-style: normal;
     background: white;
@@ -125,7 +132,6 @@ const styles = css`
     /* font-size: 1.15rem; */
     font-size: 1rem;
   }
-
 
   li {
     list-style-type: lower-roman;
