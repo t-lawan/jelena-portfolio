@@ -16,6 +16,7 @@ export const ImageWrapper = props => {
         width={"100%"}
         image={props.image}
         alt={props.content.image.description ?? ""}
+        quality={100}
       />
       <Caption> {props.content.image.description} </Caption>
     </StyledImageWrapper>
