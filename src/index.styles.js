@@ -57,6 +57,7 @@ const styles = css`
     margin: 0 auto;
     font-family: "TradeGothic", serif;
     font-weight: 400;
+    font-display: block;
     font-style: normal;
     background: white;
   }
@@ -129,8 +130,7 @@ const styles = css`
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    /* font-size: 1.15rem; */
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   li {

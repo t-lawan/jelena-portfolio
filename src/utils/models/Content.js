@@ -1,9 +1,10 @@
 import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { ImageCarousel } from "../../components/image-carousel/image-carousel"
 import { VideoPlayer } from "../../components/video-player/video-player"
 import { richTextOptions } from "../richtext"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { ImageWrapper } from "../../components/image-wrapper/image-wrapper"
 
 export class Content {
   id
@@ -20,12 +21,7 @@ export const renderContent = content => {
 
   if (content.image) {
     const image = getImage(content.image)
-    return (
-      <>
-        <GatsbyImage width={"100%"} image={image} alt={content.image.description ?? ''} />
-        <p> {content.image.description} </p>
-      </>
-    )
+    return <ImageWrapper image={image} content={content} />
   }
 
   if (content.imageCarousel) {

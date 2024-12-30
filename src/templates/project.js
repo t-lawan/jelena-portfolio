@@ -19,7 +19,6 @@ const ContentWrapper = styled.div`
 `
 
 const Title = styled.p`
-  /* font-weight: bold; */
   font-style: italic;
 `
 
@@ -29,11 +28,6 @@ const ProjectPage = context => {
   return (
     <Layout>
       <Seo title={page.title} description={page.description} />
-      {/* <ContentWrapper>
-        <Title>{page.title}, 2024</Title>
-        <p> {page.description} </p>
-      </ContentWrapper> */}
-
       {page.content.map((content, index) => (
         <ContentWrapper key={index}>{renderContent(content)}</ContentWrapper>
       ))}
