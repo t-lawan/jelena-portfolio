@@ -101,7 +101,7 @@ const Navbar = () => {
     <NavbarWrapper>
       <MobileNavbarWrapper>
         <StyledInternalLink activeClassName="underline" to={`/`}>
-          Jelena Viskovic
+          Jelena Visković
         </StyledInternalLink>
         <HamburgerWrapper>
           <Hamburger
@@ -119,7 +119,7 @@ const Navbar = () => {
           activeClassName="underline"
           to={`/`}
         >
-          Jelena Viskovic
+          Jelena Visković
         </HiddableInternalLink>
         {navbarLinks.map((navbarLink, index) => (
           <InternalLink
