@@ -13,9 +13,6 @@ const Caption = styled.p`
 
 export const ImageWrapper = props => {
   const document = richTextFromMarkdown("# Hello World")
-  console.log(document)
-
-  console.log(props.content)
   return (
     <StyledImageWrapper>
       <GatsbyImage
@@ -27,10 +24,11 @@ export const ImageWrapper = props => {
 
       <Caption>
         {" "}
-        {documentToReactComponents(
+        
+        {props.content.description ? documentToReactComponents(
           JSON.parse(props.content.description.raw),
           richTextOptions
-        )}{" "}
+        ): null}{" "}
       </Caption>
     </StyledImageWrapper>
   )
