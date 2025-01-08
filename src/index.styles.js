@@ -36,12 +36,12 @@ export const Section = styled.section`
 `
 
 const styles = css`
-  @font-face {
+  /* @font-face {
     font-family: "Sora";
     font-weight: 100 900;
     font-style: normal;
     src: url(/fonts/Sora.ttf) format("truetype");
-  }
+  } */
 
   /* @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"); */
   *,

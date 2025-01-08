@@ -65,5 +65,15 @@ module.exports = {
         icon: `src/images/globe.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Sora\:300,400,400i,700`,
+          `source sans pro\:300,400,400i,700` 
+        ],
+        // display: 'swap'
+      }
+    }
   ],
 }
