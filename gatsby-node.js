@@ -30,6 +30,9 @@ exports.createPages = async ({ graphql, actions }) => {
                     filename
                     description
                   }
+                  caption {
+                    caption
+                  }
                 }
                 ... on ContentfulImageCarousel {
                   id

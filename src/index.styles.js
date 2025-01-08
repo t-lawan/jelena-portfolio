@@ -37,11 +37,11 @@ export const Section = styled.section`
 
 const styles = css`
   @font-face {
-    font-family: "TradeGothic";
+    font-family: "Sora";
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;
-    src: url(/fonts/trade-gothic.otf) format("opentype");
+    src: url(/fonts/Sora.ttf) format("truetype");
   }
 
   @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
@@ -55,7 +55,7 @@ const styles = css`
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    font-family: "TradeGothic", serif;
+    font-family: "Sora", serif;
     font-weight: 400;
     font-display: block;
     font-style: normal;

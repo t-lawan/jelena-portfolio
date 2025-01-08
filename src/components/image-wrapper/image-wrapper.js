@@ -10,15 +10,17 @@ const Caption = styled.p`
 `
 
 export const ImageWrapper = props => {
+
+  console.log(props.content)
   return (
     <StyledImageWrapper>
       <GatsbyImage
         width={"100%"}
         image={props.image}
-        alt={props.content.image.description ?? ""}
+        alt={props.content.image.description ?? "image"}
         quality={100}
       />
-      <Caption> {props.content.image.description} </Caption>
+      <Caption> {props.content.caption?.caption} </Caption>
     </StyledImageWrapper>
   )
 }
