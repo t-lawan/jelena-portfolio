@@ -36,8 +36,8 @@ const IndexPage = () => {
                   filename
                   description
                 }
-                caption {
-                  caption
+                description {
+                  raw
                 }
               }
               ... on ContentfulImageCarousel {
@@ -74,7 +74,9 @@ const IndexPage = () => {
         description={contentfulSite.description}
       />
       {contentfulSite.contentList.map((obj, index) => (
-        <ContentWrapper key={index}>{renderContent(obj.content)}</ContentWrapper>
+        <ContentWrapper key={index}>
+          {renderContent(obj.content)}
+        </ContentWrapper>
       ))}
     </Layout>
   )

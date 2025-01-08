@@ -25,7 +25,7 @@ const StyledInternalLink = styled(InternalLink)`
 const HiddableInternalLink = styled(InternalLink)`
     margin-bottom: 1rem;
   @media only screen and (max-width: ${size.tablet}) {
-    display: ${props => (props.isopen ? "none" : "inherit")};
+    display: ${props => (props.$isopen ? "none" : "inherit")};
     margin: 0;
   }
 `
@@ -60,7 +60,7 @@ const NavbarLinksWrapper = styled.div`
 
   @media only screen and (max-width: ${size.tablet}) {
     height: auto;
-    display: ${props => (props.isopen ? "flex" : "none")};
+    display: ${props => (props.$isopen ? "flex" : "none")};
   }
 `
 const Navbar = () => {
@@ -113,9 +113,9 @@ const Navbar = () => {
           />
         </HamburgerWrapper>
       </MobileNavbarWrapper>
-      <NavbarLinksWrapper isopen={isOpen}>
+      <NavbarLinksWrapper $isopen={isOpen}>
         <HiddableInternalLink
-          isopen={isOpen}
+          $isopen={isOpen}
           activeClassName="underline"
           to={`/`}
         >

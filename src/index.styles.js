@@ -39,7 +39,6 @@ const styles = css`
   @font-face {
     font-family: "Sora";
     font-weight: 100 900;
-    font-display: swap;
     font-style: normal;
     src: url(/fonts/Sora.ttf) format("truetype");
   }
