@@ -43,7 +43,7 @@ const styles = css`
     src: url(/fonts/Sora.ttf) format("truetype");
   }
 
-  @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+  /* @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"); */
   *,
   body {
     box-sizing: border-box;

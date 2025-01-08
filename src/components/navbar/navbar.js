@@ -25,7 +25,7 @@ const StyledInternalLink = styled(InternalLink)`
 const HiddableInternalLink = styled(InternalLink)`
     margin-bottom: 1rem;
   @media only screen and (max-width: ${size.tablet}) {
-    display: ${props => (props.$isopen ? "none" : "inherit")};
+    display: ${props => (props.isopen ? "none" : "inherit")};
     margin: 0;
   }
 `
@@ -60,13 +60,13 @@ const NavbarLinksWrapper = styled.div`
 
   @media only screen and (max-width: ${size.tablet}) {
     height: auto;
-    display: ${props => (props.$isopen ? "flex" : "none")};
+    display: ${props => (props.isopen ? "flex" : "none")};
   }
 `
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const closeNavbar = () => setIsOpen(false)
+  // const closeNavbar = () => setIsOpen(false)
 
   const data = useStaticQuery(
     graphql`
@@ -108,14 +108,14 @@ const Navbar = () => {
             animateOnMount={true}
             size={12}
             color="blue"
-            toggled={isOpen}
+            toggled={isOpen ? 1 : 0}
             toggle={setIsOpen}
           />
         </HamburgerWrapper>
       </MobileNavbarWrapper>
-      <NavbarLinksWrapper $isopen={isOpen}>
+      <NavbarLinksWrapper isopen={isOpen ? 1 : 0}>
         <HiddableInternalLink
-          $isopen={isOpen}
+          isopen={isOpen ? 1 : 0}
           activeClassName="underline"
           to={`/`}
         >
