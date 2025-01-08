@@ -73,9 +73,6 @@ const Navbar = () => {
       {
         contentfulSite {
           title
-          homePageText {
-            raw
-          }
           description
           navbarLinks {
             title
