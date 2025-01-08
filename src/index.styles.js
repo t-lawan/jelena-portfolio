@@ -130,6 +130,7 @@ const styles = css`
     padding-right: 0;
     padding-top: 0;
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   li {
