@@ -22,6 +22,7 @@ const TwoColumnWrapper = styled.div`
   @media only screen and (max-width: ${size.tablet}) {
     grid-template-columns: 1fr;
     align-content: baseline;
+    height: auto;
   }
 `
 

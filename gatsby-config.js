@@ -70,9 +70,8 @@ module.exports = {
       options: {
         fonts: [
           `Sora\:300,400,400i,700`,
-          `source sans pro\:300,400,400i,700` 
+          `Inter\:300,400,400i,700` 
         ],
-        // display: 'swap'
       }
     }
   ],

@@ -54,7 +54,7 @@ const styles = css`
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    font-family: "Sora", serif;
+    font-family: "Inter", serif;
     font-weight: 400;
     font-display: block;
     font-style: normal;

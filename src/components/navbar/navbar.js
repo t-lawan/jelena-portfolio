@@ -12,6 +12,7 @@ const NavbarWrapper = styled.nav`
 
   @media only screen and (max-width: ${size.tablet}) {
     height: fit-content;
+    height: 100%;
     padding: 0.5rem 1rem;
     border-bottom: 1px dotted blue;
   }
