@@ -31,6 +31,7 @@ function Seo({ description, title, children }) {
   return (
     <Helmet>
       <title>{title ?? defaultTitle}</title>
+      <meta name="title" content={title} />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
