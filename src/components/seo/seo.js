@@ -31,6 +31,7 @@ function Seo({ description, title, children }) {
   return (
     <Helmet>
       <title>{title ?? defaultTitle}</title>
+      <link rel="canonical" href={site.siteMetadata.siteUrl} />
       <meta name="title" content={title} />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
