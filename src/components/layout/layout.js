@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
-// import { GlobalStyles, size } from "../../styles/global"
 import Navbar from "../navbar/navbar"
 import { GlobalStyles, size } from "../../index.styles"
 import Seo from "../seo/seo"
@@ -40,7 +39,6 @@ const Layout = props => {
           <MainWrapper>{props.children}</MainWrapper>
         </TwoColumnWrapper>
 
-        {/* <Marquee /> */}
       </LayoutWrapper>
     </HelmetProvider>
   )
