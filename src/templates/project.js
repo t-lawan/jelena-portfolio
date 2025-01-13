@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import Seo from "../components/seo/seo"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import styled from "@emotion/styled/macro"
 import { renderContent } from "../utils/models/Content"
@@ -18,16 +17,11 @@ const ContentWrapper = styled.div`
   }
 `
 
-const Title = styled.p`
-  font-style: italic;
-`
-
 const ProjectPage = context => {
 
   let page = context.pageContext.page
   return (
-    <Layout>
-      <Seo title={page.title} description={page.description} />
+    <Layout title={page.title} description={page.description}>
       {page.content.map((content, index) => (
         <ContentWrapper key={index}>{renderContent(content)}</ContentWrapper>
       ))}

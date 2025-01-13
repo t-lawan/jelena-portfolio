@@ -68,11 +68,10 @@ const IndexPage = () => {
   const { contentfulSite } = data
 
   return (
-    <Layout>
-      <Seo
-        title={contentfulSite.title}
-        description={contentfulSite.description}
-      />
+    <Layout
+      title={contentfulSite.title}
+      description={contentfulSite.description}
+    >
       {contentfulSite.contentList.map((obj, index) => (
         <ContentWrapper key={index}>
           {renderContent(obj.content)}
@@ -82,6 +81,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
-
-// export const Head = () => <Seo title="Jelena" description="Jelan" />
+export default IndexPage;

@@ -4,6 +4,8 @@ import styled from "@emotion/styled"
 // import { GlobalStyles, size } from "../../styles/global"
 import Navbar from "../navbar/navbar"
 import { GlobalStyles, size } from "../../index.styles"
+import Seo from "../seo/seo"
+import { HelmetProvider } from "react-helmet-async"
 
 const MainWrapper = styled.main`
   padding: 1rem;
@@ -27,23 +29,25 @@ const TwoColumnWrapper = styled.div`
 `
 
 const Layout = props => {
-
   return (
-    <LayoutWrapper>
-      <GlobalStyles />
+    <HelmetProvider context={{}}>
+      <LayoutWrapper>
+        <GlobalStyles />
+        <Seo title={props.title ?? ""} description={props.description ?? ""} />
 
-      <TwoColumnWrapper>
-        <Navbar />
-        <MainWrapper>{props.children}</MainWrapper>
-      </TwoColumnWrapper>
+        <TwoColumnWrapper>
+          <Navbar />
+          <MainWrapper>{props.children}</MainWrapper>
+        </TwoColumnWrapper>
 
-      {/* <Marquee /> */}
-    </LayoutWrapper>
+        {/* <Marquee /> */}
+      </LayoutWrapper>
+    </HelmetProvider>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired, 
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

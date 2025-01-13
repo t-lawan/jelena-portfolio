@@ -13,13 +13,14 @@ require("dotenv").config({
  */
 module.exports = {
   siteMetadata: {
-    title: `Jelena Viskovic`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Jelena Visković`,
+    description: `Jelena Visković`,
+    author: `Jelena Visković`,
+    siteUrl: `https://jelenaviskovic.net/`,
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
